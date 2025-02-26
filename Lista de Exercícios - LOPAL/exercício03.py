@@ -8,4 +8,4 @@ comparacao = bool(valor01 >= 3), bool(valor02 <= 4)
 print(comparacao)
 
 #IMPRIME O RESULTADO
-print(f"\nO {valor01} é maior ou igual que 3 \nO {valor02} é menor ou igual a 4 \nAlguma das condições anterioes é verdadeira? \n{comparacao} ")
+print(f"\nO {valor01} é maior ou igual que 3 \nO {valor02} é menor ou igual a 4 \nAlguma das condições anterioes é verdadeira? \n{bool(comparacao)} ")

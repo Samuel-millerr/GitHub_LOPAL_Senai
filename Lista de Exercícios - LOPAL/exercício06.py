@@ -3,4 +3,5 @@
 numero01 = float(input("Insira o primeiro número: "))
 numero02 = float(input("Insira o segundo número: "))
 
-print(f"Algum dos número é negativo? \n{}")
+#IMPRESSÃO E CALCULO DO RESULTADO
+print(f"Algum dos número é negativo? \n{numero01 * numero02 < 0}")
