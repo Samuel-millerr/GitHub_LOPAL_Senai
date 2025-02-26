@@ -6,3 +6,4 @@ numero = int(input("Insira o número a ser calculado: "))
 print(f"A raiz cubica de {numero} é {numero ** (1/3):.1f}")
 
 
+

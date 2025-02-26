@@ -8,3 +8,4 @@ imc = peso/(altura** 2)
 
 #IMPRESSÃO DO RESULTADO
 print(f"O seu IMC é de {imc:.2f}")
+
