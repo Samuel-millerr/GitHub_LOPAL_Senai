@@ -121,8 +121,8 @@ if escolha == opcoes_maquina:
 elif (escolha == "PEDRA" and opcoes_maquina == "TESOURA") or (escolha == "PAPEL" and opcoes_maquina == "PEDRA") or (escolha == "TESOURA" and opcoes_maquina == "PAPEL"):
     print(f"Você escolheu {escolha} e a maquina escolheu {opcoes_maquina}")
     print("Parabéns, você ganhou!")
-elif escolha != opcoes:
-    print("Opção Inválida!")
-else:
+elif (escolha == "TESOURA" and opcoes_maquina == "PEDRA") or (escolha == "PEDRA" and opcoes_maquina == "PAPEL") or (escolha == "PAPEL" and opcoes_maquina == "TESOURA"):
     print(f"Você escolheu {escolha} e a maquina escolheu {opcoes_maquina}")
     print("Você perdeu!")
+else:
+    print("Opção Inválida!")
