@@ -4,7 +4,7 @@ valor01 = float(input("Insira o primeiro valor: "))
 valor02 = float(input("Insira o segundo valor: "))
 
 #COMPARAÇÃO DOS VALORES
-comparacao = bool(valor01 >= 3), bool(valor02 <= 4)
+comparacao = valor01 >= 3, valor02 <= 4
 print(comparacao)
 
 #IMPRIME O RESULTADO
