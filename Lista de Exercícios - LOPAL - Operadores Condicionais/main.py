@@ -1,4 +1,5 @@
 import random
+import time
 
 #EXERCICIO 01
 """idade = int(input("Insira a sua idade: "))
@@ -111,13 +112,17 @@ elif idade < 18:
     print(situacao)"""
 
 #EXERCICIO 09
-escolha = input("Digite a opção que você deseja jogar:" + "\nPedra \nPapel \nTesoura \n").upper()
+escolha = input("Digite a opção que você deseja jogar:" + "\nPedra \nPapel \nTesoura \n").upper().strip()
 opcoes = ["PEDRA", "PAPEL", "TESOURA"]
 opcoes_maquina = random.choice(opcoes)
 
+for i in range(5):
+    print(".")
+    time.sleep(0.5)
+
 if escolha == opcoes_maquina:
     print(f"Você escolheu {escolha} e a maquina escolheu {opcoes_maquina}")
-    print("EMPATE")
+    print("EMPATE")''
 elif (escolha == "PEDRA" and opcoes_maquina == "TESOURA") or (escolha == "PAPEL" and opcoes_maquina == "PEDRA") or (escolha == "TESOURA" and opcoes_maquina == "PAPEL"):
     print(f"Você escolheu {escolha} e a maquina escolheu {opcoes_maquina}")
     print("Parabéns, você ganhou!")
