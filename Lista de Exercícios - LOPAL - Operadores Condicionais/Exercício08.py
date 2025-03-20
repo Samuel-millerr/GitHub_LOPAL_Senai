@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 #EXERCÍCIO 08 - VERIFICAÇÃO DE FORMAS
+=======
+#EXERCÍCIO 08 - VERIFICAÇÃO DE FORMA
+>>>>>>> ee2f626aafdce6ab7a82ce527e604ee16b3e141e
 lado_01 = int(input("Insira o primeiro lado: "))
 lado_02 = int(input("Insira o segundo lado: "))
 lado_03 = int(input("Insira o terceiro lado: "))

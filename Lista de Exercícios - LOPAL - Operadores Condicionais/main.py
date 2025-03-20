@@ -122,7 +122,11 @@ for i in range(5):
 
 if escolha == opcoes_maquina:
     print(f"Você escolheu {escolha} e a maquina escolheu {opcoes_maquina}")
+<<<<<<< HEAD
     print("EMPATE")
+=======
+    print("EMPATE")''
+>>>>>>> ee2f626aafdce6ab7a82ce527e604ee16b3e141e
 elif (escolha == "PEDRA" and opcoes_maquina == "TESOURA") or (escolha == "PAPEL" and opcoes_maquina == "PEDRA") or (escolha == "TESOURA" and opcoes_maquina == "PAPEL"):
     print(f"Você escolheu {escolha} e a maquina escolheu {opcoes_maquina}")
     print("Parabéns, você ganhou!")

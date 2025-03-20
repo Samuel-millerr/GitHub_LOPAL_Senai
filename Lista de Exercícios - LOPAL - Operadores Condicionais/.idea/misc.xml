@@ -3,5 +3,8 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.13 (Lista de Exercícios - LOPAL - Operadores Condicionais)" />
   </component>
+<<<<<<< HEAD
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.13" project-jdk-type="Python SDK" />
+=======
+>>>>>>> ee2f626aafdce6ab7a82ce527e604ee16b3e141e
 </project>

@@ -3,6 +3,7 @@ idade_01 = int(input("Insira a idade da primeira pessoa: "))
 idade_02 = int(input("Insira a idade da segunda pessoa: "))
 idade_03 = int(input("Insira a idade da terceira pessoa: "))
 
+<<<<<<< HEAD
 if idade_01 < idade_02 and idade_01 < idade_03 or idade_01 == idade_02 < idade_03:
     idade_menor = idade_01
 elif idade_02 < idade_01 and idade_02 < idade_03 or idade_02 == idade_03 < idade_01:
@@ -26,3 +27,12 @@ if idade_maior != "":
     print("Segundo o algoritimo, dentre as idades: ")
     print(f"A idade {idade_menor} é a menor.")
     print(f"A idade {idade_maior} é a maior.")
+=======
+if idade_01 == idade_02 == idade_03 == idade_01:
+    print(f"{idade_01}, {idade_02}, {idade_03}")
+    print("As idades são todas iguais ")
+elif idade_01 == idade_02 and idade_01 and idade_02 > idade_03:
+    print(f"A idade {idade_03} é a menor")
+    print(f"A idade {idade_02} é a maior")
+elif idade_01 == idade_03 and idade_01 and idade_03 > idade_02:
+>>>>>>> ee2f626aafdce6ab7a82ce527e604ee16b3e141e

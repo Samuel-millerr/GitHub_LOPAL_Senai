@@ -9,3 +9,4 @@ media = (numero01 + numero02 + numero03)/3
 
 #IMPRIMIR O RESULTADO
 print(f"A média dos valores é {media:.1f}")
+

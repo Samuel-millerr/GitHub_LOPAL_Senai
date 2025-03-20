@@ -15,3 +15,4 @@ media_ponderada = ((nota01*peso_nota01) + (nota02*peso_nota02) + (nota03 * peso_
 
 #IMPRESSÃO DO RESULTADO
 print(f"A média ponderada das notas é de {media_ponderada:.2f}")
+
