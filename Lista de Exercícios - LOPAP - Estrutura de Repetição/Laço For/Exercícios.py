@@ -24,21 +24,21 @@
 # for multiplicador in range(1,11):
 #     print(f"{numero} x {multiplicador} = {numero*multiplicador}")
 
-#Exercício 05
+# #Exercício 05
 tamanho_lista = int(input("Insira o tamanho da lista: "))
 soma = 0
 
-# for i in range(tamanho_lista):
-#     numero =int(input(f"Digite o {i+1}° numero: "))
-#     soma += numero
-#
-#
-# print(soma/tamanho_lista)
+for i in range(tamanho_lista):
+    numero =int(input(f"Digite o {i+1}° numero: "))
+    soma += numero
 
-# numeros = []
-# for i in range(tamanho_lista):
-#     numero = int(input(f"Insira o {i+1}° número: "))
-#     numeros.insert(i, numero)
-#
-# print(numeros)
-# print(f"Média: {sum(numeros)/tamanho_lista}")
+
+print(soma/tamanho_lista)
+
+numeros = []
+for i in range(tamanho_lista):
+    numero = int(input(f"Insira o {i+1}° número: "))
+    numeros.insert(i, numero)
+
+print(numeros)
+print(f"Média: {sum(numeros)/tamanho_lista}")
