@@ -7,8 +7,6 @@ condicao = int(input().strip())
 
 
 if condicao == 1:
-    x = 1
-
     # Definição dos numeros da cartela
     numeros_b = []
     for i in range(15):
@@ -32,13 +30,13 @@ if condicao == 1:
 
     numeros_bingo = (numeros_b + numeros_i + numeros_n + numeros_g + numeros_o)
     # Sortear os números e mostrar para o usuário
-    while x == 1:
+    while condicao == 1:
         print(random.choice(numeros_bingo))
-        continuar = int(input("(1) Sortear mais um número \n(0) Sair\n").strip())
-        if continuar == 1:
-            x = 1
+        condicao = int(input("(1) Sortear mais um número \n(0) Sair\n").strip())
+        if condicao == 1:
+            condicao = 1
         else:
-            x = 0
+            condicao = 0
             print("JOGO ENCERRADO!")
 else:
     print("JOGO ENCERRADO!")
