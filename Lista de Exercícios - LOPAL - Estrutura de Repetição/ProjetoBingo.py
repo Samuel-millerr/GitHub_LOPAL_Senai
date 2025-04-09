@@ -5,9 +5,9 @@ print("Gostaria de jogar bingo?")
 print("(1) Sim\n(0) Não")
 condicao = int(input().strip())
 
-
 if condicao == 1:
-    # Definição dos numeros da cartela
+
+    #DEFINIÇÃO DOS NÚMEROS DA CARTELA
     numeros_b = []
     for i in range(15):
         numeros_b.append("B" + str(i + 1))
@@ -28,9 +28,23 @@ if condicao == 1:
     for i in range(60, 75):
         numeros_o.append("O" + str(i + 1))
 
-    numeros_bingo = (numeros_b + numeros_i + numeros_n + numeros_g + numeros_o)
-    # Sortear os números e mostrar para o usuário
+    #FUNÇÃO DE CRIAÇÃO DE CARTELA
+    def sorteador_cartela():
+        numeros_cartela_b = random.sample(numeros_b, k=5)
+        print(numeros_cartela_b)
+        numeros_cartela_i = random.sample(numeros_i, k=5)
+        print(numeros_cartela_i)
+        numeros_cartela_n = random.sample(numeros_n, k=5)
+        print(numeros_cartela_b)
+        numeros_cartela_g = random.sample(numeros_g, k=5)
+        print(numeros_cartela_b)
+        numeros_cartela_o = random.sample(numeros_o, k=5)
+        print(numeros_cartela_b)
+    sorteador_cartela()
+
+    #SORTEAR OS NÚMERO E MOSTRAR PARA O USUÁRIO
     while condicao == 1:
+        numeros_bingo = (numeros_b + numeros_i + numeros_n + numeros_g + numeros_o)
         print(random.choice(numeros_bingo))
         condicao = int(input("(1) Sortear mais um número \n(0) Sair\n").strip())
         if condicao == 1:
