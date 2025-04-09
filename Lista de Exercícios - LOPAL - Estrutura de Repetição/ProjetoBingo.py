@@ -36,7 +36,6 @@ if condicao == 1:
         if condicao == 1:
             condicao = 1
         else:
-            condicao = 0
             print("JOGO ENCERRADO!")
 else:
     print("JOGO ENCERRADO!")
