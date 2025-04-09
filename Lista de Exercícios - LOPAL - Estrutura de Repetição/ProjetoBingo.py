@@ -7,7 +7,7 @@ condicao = int(input().strip())
 
 if condicao == 1:
 
-    #DEFINIÇÃO DOS NÚMEROS DA CARTELA
+    # DEFINIÇÃO DOS NÚMEROS DA CARTELA
     numeros_b = []
     for i in range(15):
         numeros_b.append("B" + str(i + 1))
@@ -28,7 +28,7 @@ if condicao == 1:
     for i in range(60, 75):
         numeros_o.append("O" + str(i + 1))
 
-    #FUNÇÃO DE CRIAÇÃO DE CARTELA
+    # FUNÇÃO DE CRIAÇÃO DE CARTELA
     def sorteador_cartela():
         numeros_cartela_b = random.sample(numeros_b, k=5)
         print(numeros_cartela_b)
@@ -42,7 +42,7 @@ if condicao == 1:
         print(numeros_cartela_b)
     sorteador_cartela()
 
-    #SORTEAR OS NÚMERO E MOSTRAR PARA O USUÁRIO
+    # SORTEAR OS NÚMERO E MOSTRAR PARA O USUÁRIO
     while condicao == 1:
         numeros_bingo = (numeros_b + numeros_i + numeros_n + numeros_g + numeros_o)
         print(random.choice(numeros_bingo))
