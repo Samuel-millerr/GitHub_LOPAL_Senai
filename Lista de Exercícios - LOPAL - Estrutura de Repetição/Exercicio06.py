@@ -16,7 +16,7 @@ for i in range(10):
     else:
         numeros_impares.append(numero)
 
-print("Os números pares são: ", end='')
+print("\nOs números pares são: ", end='')
 for numero in numeros_pares:
     print(f"{numero} ", end='')
 
