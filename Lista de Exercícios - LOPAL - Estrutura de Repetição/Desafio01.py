@@ -7,7 +7,7 @@ sleep(1.3)
 
 print("Você agora irá decidir as principais informações para a simulação!")
 taxa_natalidade = float(input("Digite em % qual será a taxa de reprodução dos coelhos (quantos nascerão por geração): "))
-taxa_mortalidade = float(input("Digite em % qual será a taxa de mortalidade dos coelhos (quantos irão falecer por geração: "))
+taxa_mortalidade = float(input("Digite em % qual será a taxa de mortalidade dos coelhos (quantos irão falecer por geração): "))
 coelhos_iniciais = int(input("Digite qual será a quantidade de coelhos no inicio da simulação: "))
 quantidade_geracoes = int(input("Digite qual será a quantidade de gerações que a simulação deve fazer: "))
 
