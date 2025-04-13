@@ -33,14 +33,14 @@ lista_palavras =  ( # Declaração de todas as palavras possíveis para a forcar
     "python"
 )
 palavra_escolhida = random.choice(lista_palavras) # Escolha da palavra para a forca
-palavra_escolhida_oculta = re.sub(r"[a-zçãáàâãéèêíìîóòôõúùû]", "_", palavra_escolhida) #Ocultação da palavra para demostrar ao usuário
+palavra_escolhida_oculta = "_" * len(palavra_escolhida) #Ocultação da palavra para demostrar ao usuário
 letras_corretas = []
 letras_incorretas = []
 
 chances = 6
 # Laço While para o jogo rodar enquanto houver chances
 while chances > 0:
-    print(f"\nVocê já escolheu as seguinte letras {sorted(letras_corretas+letras_incorretas)}")
+    print(f"\nVocê já escolheu as seguintes letras: {sorted(letras_corretas+letras_incorretas)}") # Mostrar todas as letras que o usuário já escolheu
 
     # Exibição da palavra escolhida (oculta) e das tentativas restantes
     print(f"""
@@ -55,10 +55,10 @@ while chances > 0:
     print(f"Você tem {chances} tentativas de erro!")
 
     # Pedir ao usuário se deseja já chutar alguma palavra ou escolhar alguma letra
-    escolha_usuario = int(input("Você já gostaria de tentar adivinhar a palavra? \n( 1 ) Sim\n( 0 ) Não\n"))
+    escolha_usuario =input("Você já gostaria de tentar adivinhar a palavra? \n( 1 ) Sim\n( 0 ) Não\n").strip()
 
     # Estrutura condicional caso o usuário deseje chutar alguma letra
-    if escolha_usuario == 1:
+    if escolha_usuario.lower() == "1" or escolha_usuario == "sim":
         escolha_usuario = input("\nDigite sua palavra para tentar advinhar: ").strip()
         if escolha_usuario.lower() == palavra_escolhida:
             print(f"Parabéns você acertou a palavra!")
@@ -69,6 +69,7 @@ while chances > 0:
 
     else: # Caso o usuário não deseje adivinhar a palavra ele terá que adivinhar a letra
 
+        # Laço while para verificar se o usuário já digitou a letra
         i = 1
         while i == 1:
             escolha_usuario = input("\nDigite uma letra para tentar adivinhar a palavra: ").strip()
@@ -88,16 +89,21 @@ while chances > 0:
                 palavra_escolhida_oculta = palavra_escolhida_oculta
             posicao_letra += 1
 
+        # Adição das letras escolhidas do usuário em uma lista para exibição futura
         if escolha_usuario in palavra_escolhida:
             print("Parabéns! você acertou uma letra.")
             letras_corretas.append(escolha_usuario)
         else:
-            print(f"Que pena, a letra '{escolha_usuario}', não está na palavra.")
+            print(f"Que pena, a letra '{escolha_usuario}', não está na palavra. Você perdeu uma chance!")
             letras_incorretas.append(escolha_usuario)
             chances -= 1
 
+        # Verificão caso o usuário acerte a palavra por meio das letras
         if palavra_escolhida_oculta == palavra_escolhida:
             print(f"Parabéns você acertou a palavra!")
+            chances = 0
+        elif chances == 0:
+            print("Que pena! Todas as suas tentativas acabaram.")
             chances = 0
 
 print(f"A palavra é '{palavra_escolhida}'")
