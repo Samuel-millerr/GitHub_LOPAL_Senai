@@ -36,6 +36,7 @@ def sorteador_cartela():
 # FUNÇÃO SORTEAR OS NUMEROS
 def mostrarInterfaceBingo():
     listaNumerosEscolhidos = []
+
     def sortearNumeros():
         numeroSorteado = random.choice(numerosBingo)
         labelNumero["text"] = numeroSorteado
@@ -43,21 +44,30 @@ def mostrarInterfaceBingo():
         listaNumerosEscolhidos.append(numeroSorteado)
         labelNumerosSorteados["text"] = listaNumerosEscolhidos
 
+        if len(listaNumerosEscolhidos) % 15 == 0:
+            listaNumerosEscolhidos.append(("\n"))
+
         return
 
     windowBingo = Tk()
     windowBingo.wm_title("Bingo")
 
+    s = ttk.Style(windowBingo)
+    s.configure("Frame1.TFrame", background="green")
+
     labelNumero = ttk.Label(windowBingo, text = " ")
-    labelNumero.place(x=250, y=50)
+    labelNumero.place(x=399, y=150)
 
     buttonSortear = ttk.Button(windowBingo, text="Sortear", command=sortearNumeros)
-    buttonSortear.place(x=250, y=70)
+    buttonSortear.place(x=375, y=175)
 
-    labelNumerosSorteados = ttk.Label(windowBingo, text = " ")
-    labelNumerosSorteados.place(x=250, y=250)
+    frmNumerosSorteados = ttk.Frame(windowBingo, width = 400, height = 200,  padding = 15, style="Frame1.TFrame")
+    frmNumerosSorteados.place(x=200, y=220)
 
-    windowBingo.geometry("500x500")
+    labelNumerosSorteados = ttk.Label(frmNumerosSorteados, text = " ")
+    labelNumerosSorteados.place(x=5, y=5)
+
+    windowBingo.geometry("800x500")
     windowBingo.mainloop()
 
 
