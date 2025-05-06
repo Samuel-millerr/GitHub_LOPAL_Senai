@@ -14,3 +14,4 @@ for i in range(10):
         numeros_multiplos += 0
 
 print(f"\n{numeros_multiplos} números são múltiplos de 3!\n")
+
