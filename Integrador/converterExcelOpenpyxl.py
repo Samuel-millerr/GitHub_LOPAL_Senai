@@ -12,7 +12,7 @@ with open("arquivoCsv.csv", "r") as arquivo: # Abre o arquivo .csv
             "Esteira02": i["esteira2"],
             "Esteira03": i["esteira3"]
         }
-        datas.append(dadosData) # Adiciona as informações da linha atual em uma lista
+        datas.append(dadosData) # Adiciona as informações das linhas em uma lista
 
 # Criação da planilha no Excel através da biblioteca "openpyxl"
 workbook = openpyxl.Workbook()

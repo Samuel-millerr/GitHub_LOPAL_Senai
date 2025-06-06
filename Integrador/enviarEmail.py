@@ -6,8 +6,8 @@ from email.message import EmailMessage
 def ler_csv(arquivo_csv):
     with open(arquivo_csv, "r", encoding="utf-8") as arquivo:
         reader = csv.reader(arquivo)
-        for indice, linha in enumerate(reader):
-            if indice == 1: # Verifica a primeira linha do arquivo csv (ultima data adicionada)
+        for indice, linha in enumerate(reader): # Percorre o índice e o conteúdo da linhas
+            if indice == 1: # Verifica a segunda linha do arquivo csv (ultima data adicionada)
                 dados_dia = linha
 
     # Atribui o índice da linha csv a variável dados
